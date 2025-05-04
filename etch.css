@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.rowDiv {
+    border: 4px solid yellowgreen;
+
+}
+
+.square {
+    background: peachpuff;
+    border: 100px solid brown;
+    height: 8px;
+
+}
