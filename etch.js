@@ -22,5 +22,7 @@ function makeSquare (squares) {
     }
 }
 
+
+
 makeRow();
 makeSquare(16);
