@@ -22,9 +22,21 @@ function makeSquare (squares, i) {
     }
 }
 
+function changeColor (){
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.addEventListener("mouseenter", () =>{
+            square.style.backgroundColor = 'black';
+        });
+    });
+}
+
+
 
 for (let i = 0; i < 16; i++){
 makeRow(i);
 
 makeSquare(16, i);
 }
+
+changeColor();
