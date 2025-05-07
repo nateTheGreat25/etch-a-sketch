@@ -31,12 +31,32 @@ function changeColor (){
     });
 }
 
+let rows = 16
+let squares = 16
 
-
-for (let i = 0; i < 16; i++){
+for (let i = 0; i < rows; i++){
 makeRow(i);
 
-makeSquare(16, i);
+makeSquare(squares, i);
 }
 
 changeColor();
+
+// declares varibles  and function to get # of pixels from user
+const button = document.getElementById("resetButton");
+
+button.addEventListener("click", getPixels);
+
+function getPixels () {
+    const pixels = prompt("Enter how many pixels you would like?");
+    if (pixels != null){
+        rows = pixels;
+        squares = pixels;
+        for (let i = 0; i < rows; i++){
+            makeRow(i);
+            
+            makeSquare(squares, i);
+            }
+    }
+   
+}
