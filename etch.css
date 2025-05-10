@@ -27,5 +27,5 @@ body {
     background: white;
     height: auto;
     width: 25px;      
-    border: 0.01em solid black;
+    border: 0.01em solid rgb(211 211 211 / 0.5 );
 }

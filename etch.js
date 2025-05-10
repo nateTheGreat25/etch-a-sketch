@@ -42,21 +42,31 @@ makeSquare(squares, i);
 
 changeColor();
 
+function removeSquares (){
+    const parentDiv = document.getElementById("container");
+    while (parentDiv.firstChild) {
+        parentDiv.removeChild(parentDiv.firstChild);
+    }
+}
+
 // declares varibles  and function to get # of pixels from user
 const button = document.getElementById("resetButton");
 
 button.addEventListener("click", getPixels);
 
 function getPixels () {
-    const pixels = prompt("Enter how many pixels you would like?");
-    if (pixels != null){
+    const pixels = prompt("Enter how many pixels you would like from 16 to 100", "16");
+    if (pixels != null || pixels > 100 || pixels < 16){
+        removeSquares();
         rows = pixels;
         squares = pixels;
         for (let i = 0; i < rows; i++){
+            
             makeRow(i);
             
             makeSquare(squares, i);
             }
+        changeColor();    
     }
    
 }
